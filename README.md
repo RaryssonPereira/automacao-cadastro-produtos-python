@@ -141,3 +141,11 @@ Esse processo se repete automaticamente para cada linha da base de dados, garant
 > ✅ Observação: O script verifica se o campo de observações está vazio (`NaN`) antes de preencher, garantindo que não sejam inseridos valores incorretos.
 
 ---
+
+## ✅ Considerações Finais
+
+Este projeto demonstrou como é possível automatizar tarefas repetitivas na interface gráfica de forma simples e eficiente utilizando Python e a biblioteca PyAutoGUI.
+
+Além de reforçar conceitos importantes como leitura de arquivos `.csv` com `pandas` e controle de fluxo com `for`, a automação se mostrou eficaz para realizar cadastros em lote de forma precisa, simulando a interação de um usuário humano no sistema.
+
+> 🧪 **Próximos passos sugeridos:** adicionar tratamento de erros, adaptar para diferentes resoluções de tela, validar dados antes do envio e explorar bibliotecas como `pyperclip` ou `selenium` para casos mais robustos.
