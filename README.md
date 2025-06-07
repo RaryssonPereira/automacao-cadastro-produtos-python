@@ -65,40 +65,71 @@ sudo apt install scrot python3-tk python3-dev -y
 
 ---
 
-## 🌐 Parte 1: Abertura do Navegador e Acesso ao Site
+## 🌐 Parte 1: Abertura do Navegador e Acesso ao Site de Cadastro
 
-A primeira parte do script executa as seguintes etapas:
+Esta etapa inicial automatiza a abertura do Google Chrome no Ubuntu e o acesso ao link da página de login do sistema de cadastro da Hashtag Treinamentos.
 
-* 🧭 Abre o menu de aplicativos do Ubuntu (atalho Super + A)
-* 🔎 Pesquisa pelo navegador Google Chrome
-* 🌍 Abre o navegador
-* ⏱️ Aguarda o carregamento da janela
-* 🔗 Digita a URL do sistema de cadastro
-* ⌨️ Pressiona Enter para acessar
+A sequência de comandos simula as ações de um usuário real:
 
-Essas acoes sao realizadas com comandos do `pyautogui`, com pausas entre etapas usando o modulo `time`.
+- 🧭 Abre o menu de aplicativos do Ubuntu (`Super + A`);
+- 🔎 Digita “chrome” para localizar o navegador;
+- 🌍 Abre o navegador Google Chrome;
+- ⏱️ Aguarda o carregamento da janela;
+- 🔗 Digita a URL do sistema de cadastro;
+- ⌨️ Pressiona Enter para acessar o site.
+
+Essa etapa garante que a automação inicie exatamente na tela de login do sistema, pronta para realizar os próximos passos.
 
 ---
 
 ## 🔐 Parte 2: Efetuar o Login no Sistema de Cadastro
 
-Esta etapa da automacao tem como objetivo simular o preenchimento do formulario de login do sistema. Ela e responsavel por:
+Após acessar a página de login, esta etapa automatiza o preenchimento dos campos de e-mail e senha, simulando o login de um usuário no sistema.
 
-* Posicionar o cursor no campo de e-mail
-* Digitar o endereco de e-mail do usuario
-* Passar para o campo de senha
-* Digitar a senha
-* Submeter o formulario pressionando Enter
+As ações realizadas são:
 
-Essas acoes garantem o acesso ao ambiente do sistema onde os produtos serao posteriormente cadastrados.
+- 📧 Clica no campo de e-mail;
+- ✍️ Digita o endereço de e-mail (exemplo usado: `tatto@exemplo.com.br`);
+- 🔀 Usa a tecla Tab para navegar até o campo de senha;
+- 🔒 Digita a senha (exemplo usado: `senhaforte`);
+- ⏭️ Pressiona Tab novamente para avançar;
+- ⏎ Pressiona Enter para realizar o login;
+- ⏳ Aguarda o carregamento da próxima página após o login.
 
-**Etapas realizadas:**
+Essa etapa completa o acesso ao sistema, preparando o ambiente para o cadastro automático dos produtos.
 
-* 🖱️ Clique na coordenada do campo de e-mail (posicao exata da tela)
-* ⌨️ Digitacao do e-mail de acesso
-* ➡️ Avanco para o campo seguinte com tecla `tab`
-* 🔒 Digitacao da senha
-* ⌨️ Enter para submeter o formulario
-* ⏱️ Pausa com `time.sleep` para aguardar o carregamento da nova tela
+---
+
+## 📥 Parte 3: Importar a Base de Dados `.csv`
+
+Nesta etapa, a automação carrega a base de dados com os produtos que serão cadastrados automaticamente no sistema.
+
+As ações executadas são:
+
+- 📚 Importa a biblioteca `pandas`, utilizada para manipulação de dados em formato de tabela (DataFrame);
+- 📂 Lê o arquivo `produtos.csv` localizado no caminho indicado e armazena seu conteúdo em uma tabela na memória.
+
+Essa tabela será utilizada nas próximas etapas para preencher automaticamente os campos do sistema com os dados de cada produto.
+
+> 📝 Certifique-se de que o arquivo `produtos.csv` exista no caminho correto e esteja formatado com colunas válidas, como `nome`, `preco`, `quantidade`, etc.
+
+---
+
+## 📝 Parte 4: Cadastrar Todos os Produtos
+
+Nesta etapa, o código percorre cada linha da tabela importada do `produtos.csv` e realiza o preenchimento automático do formulário de cadastro no site, campo por campo.
+
+Para cada produto da tabela, as seguintes ações são realizadas:
+
+- 🔢 Clica no campo "Código do Produto" e digita o código;
+- 🏷️ Digita a marca, tipo e categoria do produto;
+- 💲 Digita o preço unitário e o custo do produto;
+- 🗒️ Preenche a observação (caso exista);
+- ⏎ Pressiona Enter para enviar o formulário de cadastro;
+- 🔝 Rola a página para o topo, preparando para o próximo cadastro.
+
+Esse processo se repete automaticamente para cada linha da base de dados, garantindo o cadastro em lote de todos os produtos listados no arquivo `.csv`.
+
+> ✅ Observação: O script verifica se o campo de observações está vazio (`NaN`) antes de preencher, garantindo que não sejam inseridos valores incorretos.
 
 ---
