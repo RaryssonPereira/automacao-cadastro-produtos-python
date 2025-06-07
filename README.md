@@ -26,9 +26,9 @@ Biblioteca padrao do Python utilizada para criar pausas entre comandos.
 
 ---
 
-## 🐧 Instalacao no Ubuntu 24.04 LTS
+## 🐧 Instalação no Ubuntu 24.04 LTS
 
-### 🔧 1. Instalar o pip (caso ainda nao tenha)
+### 🔧 1. Instalar o pip (caso ainda não tenha)
 
 ```bash
 sudo apt update
@@ -41,13 +41,21 @@ sudo apt install python3-pip -y
 pip3 install pyautogui --break-system-packages
 ```
 
-### 📦 3. Instalar dependencias adicionais
+### 📦 3. Instalar dependências adicionais do PyAutoGUI
 
 ```bash
 sudo apt install scrot python3-tk python3-dev -y
 ```
 
-> Essas dependencias garantem o funcionamento completo do PyAutoGUI em ambientes graficos Linux.
+> Essas dependências garantem o funcionamento completo do PyAutoGUI em ambientes gráficos Linux.
+
+### 📊 4. Instalar a biblioteca pandas
+
+```bash
+pip3 install pandas
+```
+
+> O `pandas` é utilizado para ler e manipular os dados do arquivo `.csv` que será usado no preenchimento automático do sistema.
 
 ---
 
