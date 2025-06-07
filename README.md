@@ -1,7 +1,7 @@
 # 🚀 Automacao de Cadastro de Produtos
 
-👤 **Autor:** Rarysson Pereira
-🎓 **Formacao:** Analise e Desenvolvimento de Sistemas
+👤 **Autor:** Rarysson Pereira <br>
+🎓 **Formacao:** Analise e Desenvolvimento de Sistemas <br>
 📅 **Ultima atualizacao:** 06/06/2025
 
 ---
