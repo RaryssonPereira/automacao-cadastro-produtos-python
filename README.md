@@ -22,7 +22,11 @@ Biblioteca para controle automatizado do mouse, teclado e tela.
 
 ### ⌛ time
 
-Biblioteca padrao do Python utilizada para criar pausas entre comandos.
+Biblioteca padrão do Python utilizada para criar pausas entre comandos.
+
+### 📊 pandas
+
+Biblioteca utilizada para leitura e manipulação de dados tabulares (DataFrames), essencial para importar e trabalhar com o arquivo `produtos.csv`.
 
 ---
 
