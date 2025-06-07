@@ -56,7 +56,7 @@ sudo apt install scrot python3-tk python3-dev -y
 ### 📊 4. Instalar a biblioteca pandas
 
 ```bash
-pip3 install pandas
+pip3 install pandas --break-system-packages
 ```
 
 > O `pandas` é utilizado para ler e manipular os dados do arquivo `.csv` que será usado no preenchimento automático do sistema.
