@@ -1,109 +1,104 @@
-# Automacao de Cadastro de Produtos
+# 🚀 Automacao de Cadastro de Produtos
 
-**Autor:** Rarysson Pereira
-**Formacao:** Analise e Desenvolvimento de Sistemas
-**Ultima atualizacao:** 06/06/2025
-
----
-
-## Objetivo do Projeto
-
-Este projeto tem como objetivo automatizar o processo de cadastro de produtos em um sistema web, utilizando a biblioteca PyAutoGUI em Python. A automacao simula as acoes de um usuario real — como abrir o navegador, preencher formularios e pressionar teclas — com total precisao.
-
-Essa automacao foi desenvolvida como parte dos estudos da trilha de Python Intensivao da Hashtag Treinamentos, voltada para iniciantes que desejam entender o uso prático de bibliotecas de automacao com foco em produtividade e simulacao de interacoes humanas com a interface grafica.
+👤 **Autor:** Rarysson Pereira
+🎓 **Formacao:** Analise e Desenvolvimento de Sistemas
+📅 **Ultima atualizacao:** 06/06/2025
 
 ---
 
-## Parte 1: Abertura do Navegador e Acesso ao Site
+## 🎯 Objetivo do Projeto
 
-O script executa a seguinte sequencia:
+Este projeto tem como objetivo automatizar o processo de cadastro de produtos em um sistema web, utilizando a biblioteca **PyAutoGUI** com **Python**. A automacao simula as acoes de um usuario real: abrir o navegador, preencher formularios e pressionar teclas — tudo de forma precisa e automatica.
 
-* Abrir o menu de aplicativos do Ubuntu (atalho Super + A)
-* Pesquisar pelo navegador Google Chrome
-* Abrir o navegador
-* Aguardar o carregamento da janela
-* Digitar a URL do sistema de cadastro de produtos
-* Pressionar Enter para acessar
-
-Esse processo e feito de forma automatizada utilizando comandos da biblioteca `pyautogui`, com pausas controladas pelo modulo `time`.
+Este projeto foi desenvolvido como parte dos estudos da trilha de Python Intensivao da Hashtag Treinamentos, ideal para iniciantes que desejam aprender automacao de tarefas visuais.
 
 ---
 
-## Bibliotecas Utilizadas
+## 🧰 Bibliotecas Utilizadas
 
-### 1. pyautogui
+### 📦 pyautogui
 
-Utilizada para simular o controle do mouse, teclado, rolagem de tela e pressionamento de teclas. Permite interagir com qualquer elemento visual que esteja na tela do sistema operacional.
+Biblioteca para controle automatizado do mouse, teclado e tela.
 
-### 2. time
+### ⌛ time
 
-Biblioteca padrao do Python para criar pausas entre os comandos. Ideal para aguardar o carregamento de janelas ou campos.
+Biblioteca padrao do Python utilizada para criar pausas entre comandos.
 
 ---
 
-## Instalacao no Ubuntu 24.04 LTS
+## 🐧 Instalacao no Ubuntu 24.04 LTS
 
-### 1. Instalar o pip (se ainda nao estiver instalado)
+### 🔧 1. Instalar o pip (caso ainda nao tenha)
 
 ```bash
 sudo apt update
 sudo apt install python3-pip -y
 ```
 
-### 2. Instalar o PyAutoGUI com suas dependencias
+### 📥 2. Instalar o PyAutoGUI
 
 ```bash
 pip3 install pyautogui --break-system-packages
 ```
 
-### 3. Instalar dependencias adicionais para funcionamento correto:
+### 📦 3. Instalar dependencias adicionais
 
 ```bash
 sudo apt install scrot python3-tk python3-dev -y
 ```
 
-Essas dependencias sao necessarias para o funcionamento do PyAutoGUI em ambientes Linux. O `scrot` permite capturas de tela, `tk` e `dev` sao utilizados por bibliotecas graficas e de entrada.
+> Essas dependencias garantem o funcionamento completo do PyAutoGUI em ambientes graficos Linux.
 
 ---
 
-## Explicacao dos Comandos PyAutoGUI Usados
+## 🧠 Comandos Basicos do PyAutoGUI
 
-### `pyautogui.write("texto")`
-
-Simula a digitacao de um texto como se fosse pelo teclado.
-
-### `pyautogui.press("tecla")`
-
-Pressiona uma tecla especifica (ex: "enter", "tab", "backspace").
-
-### `pyautogui.click(x=..., y=...)`
-
-Realiza um clique do mouse na coordenada especificada na tela.
-
-### `pyautogui.scroll(valor)`
-
-Rola a tela. Valor positivo sobe, valor negativo desce.
-
-### `pyautogui.hotkey("tecla1", "tecla2")`
-
-Simula o pressionamento combinado de teclas (ex: Ctrl + S ou Super + A).
-
-### `pyautogui.PAUSE = tempo`
-
-Define um tempo padrao de espera (em segundos) entre os comandos, evitando que os eventos acontecam rapido demais.
-
-### `time.sleep(segundos)`
-
-Cria pausas manuais para garantir que o sistema tenha tempo de responder, especialmente durante carregamentos de paginas.
+| Comando                         | Funcao                                            |
+| ------------------------------- | ------------------------------------------------- |
+| `pyautogui.write("texto")`      | ✍️ Digita texto como no teclado                   |
+| `pyautogui.press("tecla")`      | ⌨️ Pressiona uma tecla unica (ex: "enter", "tab") |
+| `pyautogui.click(x=..., y=...)` | 🖱️ Clica na posicao da tela informada            |
+| `pyautogui.scroll(valor)`       | 🔃 Rola a tela para cima ou para baixo            |
+| `pyautogui.hotkey("ctrl", "s")` | 🎹 Pressiona combinacoes de teclas                |
+| `pyautogui.PAUSE = tempo`       | ⏸️ Adiciona pausa padrao entre os comandos        |
+| `time.sleep(segundos)`          | 💤 Pausa manual para aguardar carregamentos       |
 
 ---
 
-## Consideracoes Finais
+## 🌐 Parte 1: Abertura do Navegador e Acesso ao Site
 
-Este projeto e ideal para iniciantes que desejam aprender:
+A primeira parte do script executa as seguintes etapas:
 
-* Como funciona a interacao com o sistema operacional via Python
-* Como automatizar tarefas repetitivas sem precisar de acesso ao codigo-fonte da aplicacao
-* Como integrar arquivos de dados (como CSV) a formularios web de maneira automatizada
+* 🧭 Abre o menu de aplicativos do Ubuntu (atalho Super + A)
+* 🔎 Pesquisa pelo navegador Google Chrome
+* 🌍 Abre o navegador
+* ⏱️ Aguarda o carregamento da janela
+* 🔗 Digita a URL do sistema de cadastro
+* ⌨️ Pressiona Enter para acessar
 
-A automacao foi testada com sucesso no Ubuntu 24.04 LTS, utilizando Python 3.12 e Google Chrome.
+Essas acoes sao realizadas com comandos do `pyautogui`, com pausas entre etapas usando o modulo `time`.
+
+---
+
+## 🔐 Parte 2: Efetuar o Login no Sistema de Cadastro
+
+Esta etapa da automacao tem como objetivo simular o preenchimento do formulario de login do sistema. Ela e responsavel por:
+
+* Posicionar o cursor no campo de e-mail
+* Digitar o endereco de e-mail do usuario
+* Passar para o campo de senha
+* Digitar a senha
+* Submeter o formulario pressionando Enter
+
+Essas acoes garantem o acesso ao ambiente do sistema onde os produtos serao posteriormente cadastrados.
+
+**Etapas realizadas:**
+
+* 🖱️ Clique na coordenada do campo de e-mail (posicao exata da tela)
+* ⌨️ Digitacao do e-mail de acesso
+* ➡️ Avanco para o campo seguinte com tecla `tab`
+* 🔒 Digitacao da senha
+* ⌨️ Enter para submeter o formulario
+* ⏱️ Pausa com `time.sleep` para aguardar o carregamento da nova tela
+
+---
